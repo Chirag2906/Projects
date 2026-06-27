@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: #111;">
+    <h1 style="color: crimson;">kylian mbappé</h1>
+    <button id="Start">Start</button>
+    <button id="stop">Stop</button>
+
+</body>
+<script>
+    //  const print = function(str){
+    //     console.log(str,   Date.now());    
+    //  }
+    // const interval =  setInterval(print,2000, "Messi⚽")//  isme parameter bhi pass hojate hai
+    // clearInterval(interval)
+
+    // const start = document.getElementById('Start')
+    //     start.addEventListener('click', function (str) {
+    //         console.log(str, Date.now());
+    //     })
+    // const print = function (str) {
+    //     console.log(start);
+
+    // }
+    // const start = document.getElementById('Start')
+    // start.addEventListener('click', function (str) {
+    //     console.log(str, Date.now());
+    // })
+
+    // setInterval(print,2000,"Messi")
+
+    // Function which will execute again and again
+    
+    const print = function () {
+            console.log("Messi", Date.now());
+        }
+
+
+        let intervalId= true;
+
+
+        // Start button
+        document.getElementById('Start').addEventListener('click', function () {
+
+            // prevent multiple intervals
+            if (intervalId) {
+                intervalId = setInterval(print, 2000);
+            }
+
+        });
+
+
+        // Stop button
+        document.getElementById('stop').addEventListener('click', function () {
+
+            clearInterval(intervalId);
+
+            // reset intervalId
+            intervalId = null;
+
+        });
+
+
+
+</script>
+
+</html>
